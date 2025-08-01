@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Hub - Assessment</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">📘 JS Hub</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="notes.html">Notes</a>
+      <a href="quizzes.html">Quizzes</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="game.html">Game</a>
+      <a href="editor.html">Playground</a>
+      <button class="mode-toggle" onclick="toggleMode()"><img src="image/dark-mode.svg" class="mode"></button>
+      <button class="music-toggle" onclick="toggleMusic()"><img src="image/music-on.svg" class="mode"></button>
+    </nav>
+  </header>
+
+  
+  <main class="notes-page">
+    <section class="notes-hero">
+      <div class="hero-content">
+        <h1>JavaScript FlashCards</h1>
+        <p>FlashCards used to study and sharpen you JavaScript, from beginner to advanced</p>
+        <div class="search-box">
+          <input type="text" placeholder="Search notes...">
+          <button class="search-btn">🔍</button>
+        </div>
+      </div>
+      <div class="js-icon">
+        <svg viewBox="0 0 630 630" width="120" height="120">
+          <rect width="630" height="630" fill="#f7df1e"/>
+          <path d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="notes-container">
+      <h2 class="section-title">Core Concepts</h2>
+      <div class="notes-grid">
+        <a class="note-card" href="flashcard1.html">
+          <div class="note-icon">📌</div>
+          <h3>Variables & Data Types</h3>
+          <p>Learn about let, const, var and JavaScript data types</p>
+          <div class="note-tag">Beginner</div>
+        </a>
+        
+        <a class="note-card" href="flashcard2.html">
+          <div class="note-icon">➕</div>
+          <h3>Assignments & Operators</h3>
+          <p>Master operators and assignments in JavaScript</p>
+          <div class="note-tag">Beginner</div>
+        </a>
+        
+        <a class="note-card" href="flashcard3.html">
+          <div class="note-icon">🔁</div>
+          <h3>Loops & Conditions</h3>
+          <p>Control flow with if/else, switch, and loops</p>
+          <div class="note-tag">Beginner</div>
+        </a>
+        
+        <a class="note-card" href="flashcard4.html">
+          <div class="note-icon">🔧</div>
+          <h3>Functions</h3>
+          <p>Declaring and using functions in JavaScript</p>
+          <div class="note-tag">Intermediate</div>
+        </a>
+        
+        <a class="note-card" href="flashcard5.html">
+          <div class="note-icon">📦</div>
+          <h3>Objects & Arrays</h3>
+          <p>Working with complex data structures</p>
+          <div class="note-tag">Intermediate</div>
+        </a>
+        
+        <a class="note-card" href="flashcard6.html">
+          <div class="note-icon">🖱</div>
+          <h3>DOM Manipulation</h3>
+          <p>Interacting with web page elements</p>
+          <div class="note-tag">Intermediate</div>
+        </a>
+        
+        <a class="note-card" href="flashcard7.html">
+          <div class="note-icon">🎯</div>
+          <h3>Event Handling</h3>
+          <p>Responding to user interactions</p>
+          <div class="note-tag">Intermediate</div>
+        </a>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">📘 JS Hub</div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+      <div class="footer-social">
+        <a href="x.com"><img src="image/twitter.svg" alt="Twitter"></a>
+        <a href="github.com"><img src="image/github.svg" alt="GitHub"></a>
+        <a href="youtube.com"><img src="image/youtube.svg" alt="Youtube"></a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2025 JS Hub. Made with 💙 by Team JavaScript
+    </div>
+  </footer>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
