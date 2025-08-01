@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Hub - Assignments & Operators</title>
+  <link rel="stylesheet" href="note.css">  <!-- Make sure this matches your CSS file name -->
+</head>
+<body>
+  <header>
+    <div class="logo">📘 JS Hub</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="notes.html">Notes</a>
+      <a href="quizzes.html">Quizzes</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="game.html">Game</a>
+      <a href="editor.html">Playground</a>
+      <button class="mode-toggle" onclick="toggleMode()"><img src="image/dark-mode.svg" class="mode" alt="Dark mode toggle"></button>
+      <button class="music-toggle" onclick="toggleMusic()"><img src="image/music-on.svg" class="mode" alt="Music toggle"></button>
+    </nav>
+  </header>
+
+  <main class="note-container">   <!-- Changed from div to main for better semantics -->
+    <h1> Assignments & Operators</h1>  <!-- Added emoji -->
+
+    <p>JavaScript provides many types of operators used to assign, compare, and perform arithmetic operations on values.</p>
+
+    <h2> Assignment Operators</h2>  <!-- Added emoji -->
+    <p>Assignment operators are used to assign values to variables:</p>
+    <ul>
+      <li><code>=</code> &mdash; Assign value: <code>let x = 5;</code></li>
+      <li><code>+=</code> &mdash; Add and assign: <code>x += 3; // x = x + 3</code></li>
+      <li><code>-=</code> &mdash; Subtract and assign</li>
+      <li><code>*=</code> &mdash; Multiply and assign</li>
+      <li><code>/=</code> &mdash; Divide and assign</li>
+      <li><code>%=</code> &mdash; Modulus and assign</li>
+    </ul>
+
+    <h2> Arithmetic Operators</h2>  <!-- Added emoji -->
+    <p>Used to perform basic mathematical operations:</p>
+    <ul>
+      <li><code>+</code> &mdash; Addition</li>
+      <li><code>-</code> &mdash; Subtraction</li>
+      <li><code>*</code> &mdash; Multiplication</li>
+      <li><code>/</code> &mdash; Division</li>
+      <li><code>%</code> &mdash; Modulus (Remainder)</li>
+      <li><code>**</code> &mdash; Exponentiation</li>
+    </ul>
+
+    <h2> Comparison Operators</h2>  <!-- Added emoji -->
+    <p>These compare two values and return a boolean:</p>
+    <ul>
+      <li><code>==</code> &mdash; Equal to (loose comparison)</li>
+      <li><code>===</code> &mdash; Equal value and type (strict)</li>
+      <li><code>!=</code> &mdash; Not equal</li>
+      <li><code>!==</code> &mdash; Not equal value or type</li>
+      <li><code>></code>, <code><</code> &mdash; Greater or less than</li>
+      <li><code>>=</code>, <code><=</code> &mdash; Greater/less than or equal</li>
+    </ul>
+
+    <h2> Logical Operators</h2>  <!-- Added emoji -->
+    <ul>
+      <li><code>&&</code> &mdash; Logical AND</li>
+      <li><code>||</code> &mdash; Logical OR</li>
+      <li><code>!</code> &mdash; Logical NOT</li>
+    </ul>
+
+    <h2>📋 Example</h2>  <!-- Added emoji -->
+    <pre><code>let a = 10;
+let b = 5;
+
+a += b;  // a is now 15
+console.log(a > b && b < 10);  // true</code></pre>
+
+    <button onclick="location.href='note3.html'" class="next-button">Next Topic: Loops </button>  <!-- Added class and better text -->
+  </main>  <!-- Closing main tag -->
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">📘 JS Hub</div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+      <div class="footer-social">
+        <a href="x.com"><img src="image/twitter.svg" alt="Twitter"></a>
+        <a href="github.com"><img src="image/github.svg" alt="GitHub"></a>
+        <a href="youtube.com"><img src="image/youtube.svg" alt="Youtube"></a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2025 JS Hub. Made with 💙 by Team JavaScript
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

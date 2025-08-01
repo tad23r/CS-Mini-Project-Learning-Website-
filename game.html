@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Memory Card Game</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.5em;
+      text-shadow: 1px 1px 4px #000;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    #game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      grid-gap: 15px;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 450px;
+      padding-top: 20px;
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #61dafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      font-family: monospace;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      user-select: none;
+    }
+    .card.flipped {
+      background-color: #fff;
+      color: #000;
+      transform: rotateY(180deg);
+    }
+    .card.matched {
+      background-color: #4caf50;
+      color: white;
+      transform: scale(1.1);
+      cursor: default;
+    }
+    .btn-group {
+      margin-top: 30px;
+    }
+    button {
+      margin: 5px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #ff9800;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #fb8c00;
+    }
+  </style>
+</head>
+<body>
+  <h1>💡 JavaScript Memory Match</h1>
+  <p>Match the pairs of JavaScript keywords and methods!</p>
+  <div id="game-board"></div>
+  <div class="btn-group">
+    <button onclick="startGame()">Restart Game</button>
+    <button onclick="location.href='index.html'">Back to Home</button>
+  </div>
+
+  <script>
+    const terms = [
+      'var', 'let', 'const', 'function',
+      '=>', 'map()', 'filter()', 'event'
+    ];
+    let cards = [];
+    let flippedCards = [];
+    let matchedCards = [];
+    let boardLocked = false;
+
+    function startGame() {
+      const gameBoard = document.getElementById('game-board');
+      gameBoard.innerHTML = '';
+      flippedCards = [];
+      matchedCards = [];
+      boardLocked = false;
+
+      cards = [...terms, ...terms]
+        .sort(() => Math.random() - 0.5)
+        .map((term, index) => ({ id: index, term, matched: false }));
+
+      cards.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+        cardElement.dataset.id = card.id;
+        cardElement.onclick = () => flipCard(cardElement);
+        gameBoard.appendChild(cardElement);
+      });
+    }
+
+    function flipCard(cardElement) {
+      if (boardLocked) return;
+
+      const cardId = cardElement.dataset.id;
+      const card = cards.find(c => c.id == cardId);
+
+      if (
+        cardElement.classList.contains('flipped') ||
+        cardElement.classList.contains('matched') ||
+        flippedCards.some(f => f.card.id == card.id)
+      ) return;
+
+      cardElement.classList.add('flipped');
+      cardElement.innerText = card.term;
+      flippedCards.push({ card, element: cardElement });
+
+      if (flippedCards.length === 2) {
+        boardLocked = true;
+        setTimeout(() => {
+          checkMatch();
+          boardLocked = false;
+        }, 800);
+      }
+    }
+
+    function checkMatch() {
+      const [first, second] = flippedCards;
+
+      if (first.card.term === second.card.term) {
+        first.element.classList.add('matched');
+        second.element.classList.add('matched');
+        matchedCards.push(first.card, second.card);
+        flippedCards = [];
+
+        if (matchedCards.length === cards.length) {
+          setTimeout(() => {
+            alert('🎉 Congratulations! You matched all JavaScript terms!');
+          }, 400);
+        }
+      } else {
+        first.element.classList.remove('flipped');
+        second.element.classList.remove('flipped');
+        setTimeout(() => {
+          first.element.innerText = '';
+          second.element.innerText = '';
+        }, 200);
+        flippedCards = [];
+      }
+    }
+
+    window.onload = startGame;
+  </script>
+</body>
+</html>

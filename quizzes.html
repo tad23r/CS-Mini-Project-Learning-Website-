@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz - JS Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">📘 JS Hub</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="notes.html">Notes</a>
+      <a href="quizzes.html">Quizzes</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="game.html">Game</a>
+      <a href="editor.html">Playground</a>
+      <button class="mode-toggle" onclick="toggleMode()"><img src="image/dark-mode.svg" class="mode"></button>
+      <button class="music-toggle" onclick="toggleMusic()"><img src="image/music-on.svg" class="mode"></button>
+    </nav>
+  </header>
+
+  <div class="quiz-container">
+    <h2>JavaScript Basics Quiz</h2>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="question-container">
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. What does the `typeof` operator do in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q1" value="A"> A. Checks the data type of a variable</li>
+          <li><input type="radio" name="q1" value="B"> B. Returns the length of a variable</li>
+          <li><input type="radio" name="q1" value="C"> C. Converts a value to a string</li>
+          <li><input type="radio" name="q1" value="D"> D. Returns the variable name</li>
+        </ul>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. Which of the following is a correct way to declare a variable in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q2" value="A"> A. var = x</li>
+          <li><input type="radio" name="q2" value="B"> B. let x</li>
+          <li><input type="radio" name="q2" value="C"> C. var x =</li>
+          <li><input type="radio" name="q2" value="D"> D. declare x</li>
+        </ul>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. What is the output of `console.log(2 + '2')` in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q3" value="A"> A. 4</li>
+          <li><input type="radio" name="q3" value="B"> B. 22</li>
+          <li><input type="radio" name="q3" value="C"> C. Error</li>
+          <li><input type="radio" name="q3" value="D"> D. NaN</li>
+        </ul>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p>4. How do you write a comment in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q4" value="A"> A. // This is a comment</li>
+          <li><input type="radio" name="q4" value="B"> B. <!-- This is a comment --> </li>
+          <li><input type="radio" name="q4" value="C"> C. //</li>
+          <li><input type="radio" name="q4" value="D"> D. /* comment */</li>
+        </ul>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p>5. Which of the following is NOT a primitive data type in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q5" value="A"> A. String</li>
+          <li><input type="radio" name="q5" value="B"> B. Number</li>
+          <li><input type="radio" name="q5" value="C"> C. Object</li>
+          <li><input type="radio" name="q5" value="D"> D. Boolean</li>
+        </ul>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question">
+        <p>6. What does the `===` operator do in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q6" value="A"> A. Compares value only</li>
+          <li><input type="radio" name="q6" value="B"> B. Compares both value and type</li>
+          <li><input type="radio" name="q6" value="C"> C. Compares type only</li>
+          <li><input type="radio" name="q6" value="D"> D. Checks if two values are equal</li>
+        </ul>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question">
+        <p>7. What is the correct syntax to create a function in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q7" value="A"> A. function myFunction() {}</li>
+          <li><input type="radio" name="q7" value="B"> B. def myFunction() {}</li>
+          <li><input type="radio" name="q7" value="C"> C. function: myFunction() {}</li>
+          <li><input type="radio" name="q7" value="D"> D. func myFunction() {}</li>
+        </ul>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question">
+        <p>8. What is the method to remove the last element of an array?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q8" value="A"> A. pop()</li>
+          <li><input type="radio" name="q8" value="B"> B. shift()</li>
+          <li><input type="radio" name="q8" value="C"> C. slice()</li>
+          <li><input type="radio" name="q8" value="D"> D. delete()</li>
+        </ul>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="question">
+        <p>9. Which of the following will throw an error in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q9" value="A"> A. var x = 5;</li>
+          <li><input type="radio" name="q9" value="B"> B. let y = 10;</li>
+          <li><input type="radio" name="q9" value="C"> C. const z = 15;</li>
+          <li><input type="radio" name="q9" value="D"> D. var x = 5; x = 10;</li>
+        </ul>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="question">
+        <p>10. What is the correct syntax for calling a function in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q10" value="A"> A. call functionName()</li>
+          <li><input type="radio" name="q10" value="B"> B. functionName.call()</li>
+          <li><input type="radio" name="q10" value="C"> C. functionName()</li>
+          <li><input type="radio" name="q10" value="D"> D. call functionName</li>
+        </ul>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="question">
+        <p>11. Which of the following is used to add a new element at the beginning of an array?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q11" value="A"> A. push()</li>
+          <li><input type="radio" name="q11" value="B"> B. unshift()</li>
+          <li><input type="radio" name="q11" value="C"> C. shift()</li>
+          <li><input type="radio" name="q11" value="D"> D. append()</li>
+        </ul>
+      </div>
+
+      <!-- Question 12 -->
+      <div class="question">
+        <p>12. What is the result of the expression `NaN === NaN` in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q12" value="A"> A. true</li>
+          <li><input type="radio" name="q12" value="B"> B. false</li>
+          <li><input type="radio" name="q12" value="C"> C. NaN</li>
+          <li><input type="radio" name="q12" value="D"> D. undefined</li>
+        </ul>
+      </div>
+
+      <!-- Question 13 -->
+      <div class="question">
+        <p>13. Which function is used to parse a string and convert it into an integer in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q13" value="A"> A. parseInt()</li>
+          <li><input type="radio" name="q13" value="B"> B. toInteger()</li>
+          <li><input type="radio" name="q13" value="C"> C. integer()</li>
+          <li><input type="radio" name="q13" value="D"> D. parseNumber()</li>
+        </ul>
+      </div>
+    
+      <!-- Question 14 -->
+      <div class="question">
+        <p>14. How can you stop a loop from executing further in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q14" value="A"> A. break;</li>
+          <li><input type="radio" name="q14" value="B"> B. continue;</li>
+          <li><input type="radio" name="q14" value="C"> C. exit;</li>
+          <li><input type="radio" name="q14" value="D"> D. stop;</li>
+        </ul>
+      </div>
+    
+      <!-- Question 15 -->
+      <div class="question">
+        <p>15. What does `JSON.parse()` do in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q15" value="A"> A. Converts a string into an object</li>
+          <li><input type="radio" name="q15" value="B"> B. Converts an object into a string</li>
+          <li><input type="radio" name="q15" value="C"> C. Parses JSON data from a file</li>
+          <li><input type="radio" name="q15" value="D"> D. Converts a string into an array</li>
+        </ul>
+      </div>
+    
+      <!-- Question 16 -->
+      <div class="question">
+        <p>16. Which method is used to merge two arrays in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q16" value="A"> A. concat()</li>
+          <li><input type="radio" name="q16" value="B"> B. merge()</li>
+          <li><input type="radio" name="q16" value="C"> C. join()</li>
+          <li><input type="radio" name="q16" value="D"> D. add()</li>
+        </ul>
+      </div>
+    
+      <!-- Question 17 -->
+      <div class="question">
+        <p>17. How do you declare a constant variable in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q17" value="A"> A. const</li>
+          <li><input type="radio" name="q17" value="B"> B. let</li>
+          <li><input type="radio" name="q17" value="C"> C. var</li>
+          <li><input type="radio" name="q17" value="D"> D. final</li>
+        </ul>
+      </div>
+    
+      <!-- Question 18 -->
+      <div class="question">
+        <p>18. What is the default value of an uninitialized variable in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q18" value="A"> A. undefined</li>
+          <li><input type="radio" name="q18" value="B"> B. null</li>
+          <li><input type="radio" name="q18" value="C"> C. NaN</li>
+          <li><input type="radio" name="q18" value="D"> D. 0</li>
+        </ul>
+      </div>
+    
+      <!-- Question 19 -->
+      <div class="question">
+        <p>19. Which method is used to remove the first element of an array in JavaScript?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q19" value="A"> A. shift()</li>
+          <li><input type="radio" name="q19" value="B"> B. pop()</li>
+          <li><input type="radio" name="q19" value="C"> C. delete()</li>
+          <li><input type="radio" name="q19" value="D"> D. unshift()</li>
+        </ul>
+      </div>
+    
+      <!-- Question 20 -->
+      <div class="question">
+        <p>20. What is the result of the expression `Boolean(0)`?</p>
+        <ul class="answer-options">
+          <li><input type="radio" name="q20" value="A"> A. true</li>
+          <li><input type="radio" name="q20" value="B"> B. false</li>
+          <li><input type="radio" name="q20" value="C"> C. undefined</li>
+          <li><input type="radio" name="q20" value="D"> D. NaN</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+      <button class="submit-btn" onclick="calculateScore()">Submit Quiz</button>
+    
+      <div class="result" id="result"></div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">📘 JS Hub</div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+        <div class="footer-social">
+          <a href="x.com"><img src="image/twitter.svg" alt="Twitter"></a>
+          <a href="github.com"><img src="image/github.svg" alt="GitHub"></a>
+          <a href="youtube.com"><img src="image/youtube.svg" alt="Youtube"></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        © 2025 JS Hub. Made with 💙 by Team JavaScript
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    </body>
+    </html>
+
+    

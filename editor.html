@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Playground</title>
+  <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">📘 JS Hub</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="notes.html">Notes</a>
+      <a href="quizzes.html">Quizzes</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="game.html">Game</a>
+      <a href="editor.html">Playground</a>
+      <button class="mode-toggle" onclick="toggleMode()"><img src="image/dark-mode.svg" class="mode"></button>
+      <button class="music-toggle" onclick="toggleMusic()"><img src="image/music-on.svg" class="mode"></button>
+    </nav>
+  </header>
+
+  <!-- Editor + Preview Area -->
+  <div class="container">
+    <div class="editors">
+      <textarea id="html" placeholder="Write HTML here..."></textarea>
+      <textarea id="css" placeholder="Write CSS here..."></textarea>
+      <textarea id="js" placeholder="Write JavaScript here..."></textarea>
+    </div>
+    <iframe id="preview"></iframe>
+  </div>
+
+  <footer>
+    <div class="footer-copyright">
+      © 2025 JS Hub. Made with 💙 by Team JavaScript
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

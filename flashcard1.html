@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Variables and Data Types</title>
+  <link rel="stylesheet" href="flashcard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="logo">📘 JS Hub</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="notes.html">Notes</a>
+    <a href="quizzes.html">Quizzes</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="game.html">Game</a>
+    <a href="editor.html">Playground</a>
+    <button class="mode-toggle" onclick="toggleMode()"><img src="image/dark-mode.svg" class="mode"></button>
+    <button class="music-toggle" onclick="toggleMusic()"><img src="image/music-on.svg" class="mode"></button>
+  </nav>
+</header>
+
+<a href="Assessment.html"><button class="back-button" >← Back</button></a>
+
+<div class="flip-container">
+  <button class="arrow left-arrow" onclick="prevCard()">&#8592;</button>
+
+  <div class="flip-card" onclick="flipCard()">
+    <div class="flip-card-inner" id="flipContent">
+      <div class="flip-card-front">Question 1</div>
+      <div class="flip-card-back">Answer 1</div>
+    </div>
+  </div>
+
+  <button class="arrow right-arrow" onclick="nextCard()">&#8594;</button>
+</div>
+
+<!-- Editable Flashcard Content -->
+<div style="display: none;">
+  <div class="card-data" data-front="What is a variable in JavaScript?" data-back="A container for storing data values."></div>
+  <div class="card-data" data-front="What keyword declares a variable?" data-back="You can use var, let, or const."></div>
+  <div class="card-data" data-front="What is a string?" data-back="A sequence of characters like 'hello'."></div>
+  <div class="card-data" data-front="What is a number?" data-back="A numeric value like 10 or 3.14."></div>
+  <div class="card-data" data-front="What is boolean?" data-back="A true or false value."></div>
+  <div class="card-data" data-front="What is null?" data-back="An intentional absence of any value."></div>
+  <div class="card-data" data-front="What is undefined?" data-back="A variable declared but not assigned."></div>
+  <div class="card-data" data-front="What is an object?" data-back="A collection of key-value pairs."></div>
+  <div class="card-data" data-front="What does typeof do?" data-back="Returns the data type of a variable."></div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">📘 JS Hub</div>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-social">
+      <a href="x.com"><img src="image/twitter.svg" alt="Twitter"></a>
+      <a href="github.com"><img src="image/github.svg" alt="GitHub"></a>
+      <a href="youtube.com"><img src="image/youtube.svg" alt="Youtube"></a>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    © 2025 JS Hub. Made with 💙 by Team JavaScript
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
